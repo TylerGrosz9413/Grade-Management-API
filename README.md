@@ -12,5 +12,5 @@ In the service files, I have created a service interface with a few methods and 
 
 In the web/controller files I am using a constructor via lombok to inject the appropriate service beans based on the dependencies of each class. I've also added the @RestController annotation which combines the @Controller and @ResponseBody annotations, indicating the class serves as a controller and that the object returned is automatically serialized into JSON and passed back into the HttpResponse object. I'm using various Mapping annotations to handle the HTTP requests; GET, POST, PUT, DELETE, for each of the handler methods.
 
-Finally, I have created three {entity}NotFoundException classes for when a course/student/grade is not present in the database. Each of these classes extends the RuntimeException class and calls one of it's parameterized constructors using the super keyword, passing in a String message as the parameter.
+Finally, I have created three {entity}NotFoundException classes for when a course/student/grade is not present in the database. Each of these classes extends the RuntimeException class and has a public constructor that calls one of the RuntimeException's parameterized constructors using the super keyword, passing in a String message as the parameter.
 
