@@ -1,7 +1,7 @@
 # Grade-Management-API
 API that allows users to perform CRUD (create, read, update, delete) operations on student, course, and grade information in a database.
 
-For this project I am using Spring Boot with Spring JPA to utilize an in-memory SQL database to store the data. I used Postman to test the API functionality.
+For this project I am using Spring Boot with Spring Boot Data JPA to utilize an in-memory SQL database to store the data. I used Postman to test the API functionality.
 This project has a three-layer design with repository, service, and web/controller layers as well as an entity folder to hold my pojo (plain old java object) files and an exception folder for all my exceptions.
 
 In the pojo files I'm using lombok annotations to create my getters, setters, and constructors. I'm also using @Entity and @Table annotations to map my pojo classes to a table and specify the details of the table that will be used for the database. Additionally, I'm using @OneToMany annotations in the Course and Student files and a @ManyToOne annotation in the Grade file to create a one-to-many relationship between student, course, and grades such that one student can have multiple grades and one course can have multiple grades.
